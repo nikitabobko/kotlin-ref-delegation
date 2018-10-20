@@ -60,3 +60,21 @@ fun main(args: Array<String>) {
 # More examples?
 Two simple examples above is all you need to know. You just have two 
 functions: `weakRef` and `softRef` which are used for delegation.
+
+
+# Usage
+In Gradle projects add this in your `build.gradle`:
+```gradle
+// ...
+repositories { 
+    // ...
+    maven {
+        url 'https://dl.bintray.com/bobko/kotlin-ref-delegation'
+    }
+}
+// ...
+dependencies {
+    // ...
+    compile "ru.nikitabobko.kotlin.refdelegation:kotlin-ref-delegation:1.0"
+}
+```
