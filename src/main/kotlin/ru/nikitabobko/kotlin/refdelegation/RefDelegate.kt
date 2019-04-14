@@ -17,9 +17,14 @@ interface ReadOnlyRefDelegate<T> : ReadOnlyProperty<Any?, T> {
 interface ReadWriteRefDelegate<T> : ReadOnlyRefDelegate<T>, ReadWriteProperty<Any?, T>
 
 private class SynchronizedRefDelegateUsingFun<R: Reference<T>, T>(private val refInit: (T) -> R,
-                                                                  private val init: () -> T) : ReadOnlyRefDelegate<T> {
+                                                                  private val init: () -> T) : ReadWriteRefDelegate<T> {
     @Volatile
     private var ref: R? = null
+
+    @Synchronized
+    override fun setValue(thisRef: Any?, property: KProperty<*>, value: T) {
+        ref = refInit(value)
+    }
 
     override val value: T
         get() = ref?.get() ?: synchronized(this) { ref?.get() ?: init().also { ref = refInit(it) } }
