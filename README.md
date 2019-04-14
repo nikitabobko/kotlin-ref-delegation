@@ -1,5 +1,5 @@
 # kotlin-ref-delegation
-This is really small library (just 29 lines of code in [one file](https://github.com/nikitabobko/kotlin-ref-delegation/blob/master/src/main/kotlin/ru/nikitabobko/kotlin/refdelegation/RefDelegate.kt)) which allows you to use Kotlin's property 
+This is really small library (just 29 lines of code in [one file](src/main/kotlin/ru/nikitabobko/kotlin/refdelegation/RefDelegate.kt)) which allows you to use Kotlin's property 
 delegation feature for accessing Java's [WeakReference](https://docs.oracle.com/javase/8/docs/api/java/lang/ref/WeakReference.html)
 and [SoftReference](https://docs.oracle.com/javase/8/docs/api/java/lang/ref/SoftReference.html) classes.
 
