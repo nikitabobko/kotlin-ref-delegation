@@ -75,6 +75,6 @@ repositories {
 // ...
 dependencies {
     // ...
-    compile "ru.nikitabobko.kotlin.refdelegation:kotlin-ref-delegation:1.0"
+    compile "ru.nikitabobko.kotlin.refdelegation:kotlin-ref-delegation:1.1.1"
 }
 ```
