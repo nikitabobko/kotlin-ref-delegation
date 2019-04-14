@@ -59,7 +59,7 @@ ext {
     siteUrl = 'https://github.com/nikitabobko/kotlin-ref-delegation'
     gitUrl = 'https://github.com/nikitabobko/kotlin-ref-delegation.git'
 
-    libraryVersion = '1.1.1'
+    libraryVersion = '1.1.2'
 
     developerId = 'bobko'
     developerName = 'Nikita Bobko'

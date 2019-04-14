@@ -49,7 +49,7 @@ private class SynchronizedRefDelegateUsingObj<R: Reference<T?>, T>(private val r
     }
 }
 
-fun <T> weakRef(init: () -> T): ReadOnlyRefDelegate<T> = SynchronizedRefDelegateUsingFun(::WeakReference, init)
-fun <T> softRef(init: () -> T): ReadOnlyRefDelegate<T> = SynchronizedRefDelegateUsingFun(::SoftReference, init)
+fun <T> weakRef(init: () -> T): ReadWriteRefDelegate<T> = SynchronizedRefDelegateUsingFun(::WeakReference, init)
+fun <T> softRef(init: () -> T): ReadWriteRefDelegate<T> = SynchronizedRefDelegateUsingFun(::SoftReference, init)
 fun <T> weakRefOf(obj: T): ReadWriteRefDelegate<T?> = SynchronizedRefDelegateUsingObj(::WeakReference, obj)
 fun <T> softRefOf(obj: T): ReadWriteRefDelegate<T?> = SynchronizedRefDelegateUsingObj(::SoftReference, obj)
